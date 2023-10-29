@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://btjoohgldiixe"]
+
+[ext_resource type="PackedScene" uid="uid://c1xw37nfvrgxo" path="res://scenes/levels/level.tscn" id="1_d38r3"]
+[ext_resource type="Script" path="res://scenes/levels/level3.gd" id="2_yot8c"]
+[ext_resource type="Texture2D" uid="uid://bl4xf3un82ngq" path="res://graphics/ground/stones.png" id="3_x1nxa"]
+[ext_resource type="TileSet" uid="uid://bbn3lxaxcug1p" path="res://scenes/houses/house_2.tres" id="4_vpvjk"]
+[ext_resource type="Texture2D" uid="uid://kf3lrqfyb0pd" path="res://graphics/lights/textures/circle.png" id="5_fm43v"]
+[ext_resource type="PackedScene" uid="uid://clvxlwat4xgl6" path="res://scenes/objects/light_fun_animation.tscn" id="5_rby8x"]
+[ext_resource type="PackedScene" uid="uid://b7ffn7bso4uk0" path="res://scenes/objects/simple_light.tscn" id="6_ic6pi"]
+[ext_resource type="PackedScene" uid="uid://xkfns2u1y21c" path="res://scenes/objects/toilet.tscn" id="8_ajpmv"]
+
+[node name="Level" instance=ExtResource("1_d38r3")]
+script = ExtResource("2_yot8c")
+
+[node name="Ground" type="Node2D" parent="." index="0"]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="GroundSprite" type="Sprite2D" parent="Ground" index="0"]
+texture_repeat = 2
+position = Vector2(-1173, 439)
+scale = Vector2(2.21114, 2.21114)
+texture = ExtResource("3_x1nxa")
+region_enabled = true
+region_rect = Rect2(-3206.47, -783.337, 7311.68, 4149.92)
+
+[node name="house" type="Node2D" parent="." index="1"]
+
+[node name="TileMap" type="TileMap" parent="house" index="0"]
+tile_set = ExtResource("4_vpvjk")
+format = 2
+layer_0/name = "walls"
+layer_0/tile_data = PackedInt32Array(589816, 65539, 6, 524280, 65539, 6, 458744, 65539, 6, 393208, 65539, 6, 327672, 65539, 6, 655352, 327683, 8, 327666, 3, 6, 327667, 3, 6, 327668, 3, 6, 327669, 3, 6, 327670, 3, 6, 327665, 262147, 7, -262153, 65539, 6, -196617, 65539, 6, -131081, 65539, 6, -65545, 65539, 6, -9, 65539, 6, -327689, 327683, 6, -131079, 3, 6, -131078, 3, 6, -131077, 3, 6, -131076, 3, 6, -131075, 3, 6, -131080, 3, 8, -196616, 65539, 6, -262152, 65539, 6, -327688, 327683, 6, -131074, 65539, 8, -196610, 65539, 6)
+layer_1/name = "house walls"
+layer_1/enabled = true
+layer_1/modulate = Color(1, 1, 1, 1)
+layer_1/y_sort_enabled = false
+layer_1/y_sort_origin = 0
+layer_1/z_index = 0
+layer_1/tile_data = PackedInt32Array(262142, 262147, 0, 262143, 262147, 0, 196608, 262147, 0, 196609, 262147, 0, 196610, 262147, 0, 196611, 262147, 0, 196612, 262147, 0, 196613, 262147, 0, 196614, 262147, 0, 196615, 262147, 0, 196616, 327683, 2, 131080, 327683, 1, 65544, 327683, 1, 8, 327683, 1, -393209, 262147, 0, -393210, 262147, 0, -393211, 262147, 0, -393212, 262147, 0, -393213, 262147, 0, -393214, 262147, 0, -393215, 262147, 0, -393216, 262147, 0, -327681, 262147, 0, -327682, 262147, 0, -327683, 262147, 0, -327684, 262147, 0, -327685, 262147, 0, -327686, 262147, 0, -327687, 262147, 0, -327688, 262147, 0, -393208, 327683, 0, -327672, 327683, 1, -262136, 327683, 1, -196600, 327683, 1, 262141, 262147, 2, 262140, 262147, 2, 262139, 262147, 2, 262138, 196611, 0, 327674, 196611, 1, 393210, 196611, 1, 458746, 196611, 1, 524282, 196611, 1, 589818, 196611, 1, 655354, 327683, 2, 655353, 262147, 2, 655352, 262147, 2, 655351, 262147, 2, 655350, 262147, 2, 655349, 262147, 2, 655348, 262147, 2, 655347, 262147, 2, 655346, 262147, 2, 655345, 196611, 2, 589809, 196611, 1, 524273, 196611, 1, 458737, 196611, 1, 393201, 196611, 1, 327665, 196611, 1, 262129, 196611, 1, 196593, 196611, 1, 131057, 196611, 1, 65521, 196611, 1, -15, 196611, 1, -65551, 196611, 1, -131087, 196611, 1, -196623, 196611, 1, -262159, 196611, 1, -327695, 196611, 0, -327694, 262147, 0, -327693, 262147, 0, -327692, 262147, 0, -327691, 262147, 0, -327690, 262147, 0, -327689, 262147, 0)
+layer_2/name = "soil ground"
+layer_2/enabled = true
+layer_2/modulate = Color(1, 1, 1, 1)
+layer_2/y_sort_enabled = false
+layer_2/y_sort_origin = 0
+layer_2/z_index = 0
+layer_2/tile_data = PackedInt32Array()
+
+[node name="Player" parent="." index="2"]
+metadata/_edit_lock_ = true
+
+[node name="PointLight2D" type="PointLight2D" parent="Player" index="8"]
+energy = 1.5
+texture = ExtResource("5_fm43v")
+
+[node name="LightFunAnimation" parent="." index="5" instance=ExtResource("5_rby8x")]
+position = Vector2(2208, -1212)
+scale = Vector2(1.5, 1.5)
+
+[node name="LightFunAnimation2" parent="." index="6" instance=ExtResource("5_rby8x")]
+position = Vector2(-1007, 267)
+scale = Vector2(2, 2)
+
+[node name="AtmosfireDarkLight" type="Node2D" parent="." index="7"]
+visible = false
+metadata/_edit_lock_ = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="AtmosfireDarkLight" index="0"]
+color = Color(0.647059, 0.647059, 0.647059, 1)
+energy = 1.2
+blend_mode = 1
+
+[node name="lights" type="Node2D" parent="." index="8"]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="SimpleLight" parent="lights" index="0" instance=ExtResource("6_ic6pi")]
+position = Vector2(951, -2066)
+
+[node name="SimpleLight2" parent="lights" index="1" instance=ExtResource("6_ic6pi")]
+position = Vector2(2628, -2062)
+
+[node name="SimpleLight3" parent="lights" index="2" instance=ExtResource("6_ic6pi")]
+position = Vector2(3233, 594)
+rotation = 1.5708
+
+[node name="SimpleLight4" parent="lights" index="3" instance=ExtResource("6_ic6pi")]
+position = Vector2(-5573, 684)
+rotation = -1.5708
+
+[node name="SimpleLight6" parent="lights" index="4" instance=ExtResource("6_ic6pi")]
+position = Vector2(-4566, 3628)
+rotation = -3.14159
+
+[node name="SimpleLight7" parent="lights" index="5" instance=ExtResource("6_ic6pi")]
+position = Vector2(-4565, 1784)
+
+[node name="SimpleLight8" parent="lights" index="6" instance=ExtResource("6_ic6pi")]
+position = Vector2(-2893, 2174)
+rotation = -1.5708
+
+[node name="SimpleLight10" parent="lights" index="7" instance=ExtResource("6_ic6pi")]
+position = Vector2(-1799, 1282)
+rotation = 3.14159
+
+[node name="SimpleLight9" parent="lights" index="8" instance=ExtResource("6_ic6pi")]
+position = Vector2(-1776, -1011)
+rotation = -3.14159
+
+[node name="SimpleLight5" parent="lights" index="9" instance=ExtResource("6_ic6pi")]
+position = Vector2(-4385, -2068)
+
+[node name="Toilet" parent="." index="9" instance=ExtResource("8_ajpmv")]
+position = Vector2(365, 248)
